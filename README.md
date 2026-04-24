@@ -1,51 +1,90 @@
 # LogiTech – Plataforma Descentralizada de Préstamos Estudiantiles
 
-## Descripción del Proyecto
-**LogiTech** es una solución de financiamiento educativo basada en **Web3** que conecta a estudiantes con fondos de apoyo de manera directa y transparente. A diferencia de los sistemas bancarios tradicionales, LogiTech utiliza contratos inteligentes para gestionar la asignación de recursos, asegurando que el capital llegue a quienes cumplen con los requisitos académicos.
+## 📝 Descripción del Proyecto
+**LogiTech** es una solución de financiamiento educativo basada en tecnología **Web3**. Su objetivo es conectar a estudiantes con fondos de apoyo de manera directa, eliminando la burocracia de los bancos tradicionales.
 
-El sistema utiliza la red **Stellar (Soroban)** para garantizar que cada préstamo otorgado sea inmutable y rastreable, permitiendo una auditoría pública del flujo de los fondos destinados a la educación.
-
----
-
-## Características Principales
-* **Smart Contracts (Soroban):** Automatización de la aprobación y desembolso de fondos mediante lógica programada en Rust.
-* **Transparencia Total:** Registro público de los préstamos otorgados para evitar el desvío de recursos.
-* **Arquitectura de Microservicios:** Backend robusto desarrollado en Java 25 para manejar la lógica de negocio.
-* **Seguridad Criptográfica:** Integración con wallets digitales para la recepción y pago de cuotas.
+Utilizando la red **Stellar (Soroban)**, el sistema garantiza que la asignación de recursos sea transparente, inmutable y verificable por cualquier ciudadano, asegurando que el apoyo llegue realmente a quienes cumplen con los requisitos académicos.
 
 ---
 
-## Objetivos del Proyecto
+## 🚀 Características Principales
+* **Descentralización:** No depende de una entidad bancaria central; la lógica reside en Smart Contracts.
+* **Smart Contracts (Soroban):** Automatización total de la aprobación y desembolso de fondos mediante contratos desarrollados en Rust.
+* **Backend de Alta Performance:** API construida con **Java 25** y **Spring Boot**, utilizando una arquitectura de microservicios.
+* **Transparencia Inmutable:** Cada préstamo genera un hash único en la blockchain de Stellar para auditorías en tiempo real.
+* **Seguridad:** Implementación de firmas digitales y manejo de claves privadas para transacciones seguras.
+
+---
+
+## 🎯 Objetivos del Proyecto
 
 ### Objetivo General
-Implementar una plataforma descentralizada que facilite el acceso a préstamos estudiantiles mediante tecnología blockchain, eliminando intermediarios financieros.
+Desarrollar una plataforma integral de préstamos estudiantiles que utilice Blockchain para garantizar la integridad financiera y la eficiencia operativa en la entrega de apoyos educativos.
 
 ### Objetivos Específicos
-* Desarrollar un **Smart Contract** en Soroban para la administración del fondo común de préstamos.
-* Construir una **API Gateway** y microservicios en Spring Boot para la gestión de usuarios.
-* Validar el flujo de transacciones en la **Stellar Testnet**.
+* **Blockchain:** Implementar un contrato inteligente funcional en Soroban para la gestión de fondos.
+* **Integración:** Conectar el ecosistema Java (Spring Boot) con la red Stellar mediante SDKs oficiales.
+* **Escalabilidad:** Diseñar la base de datos (PostgreSQL) para coexistir con los datos on-chain.
+* **Validación:** Desplegar en la Testnet de Stellar para pruebas de carga y seguridad.
 
 ---
 
-## Arquitectura del Proyecto
+## 🛠️ Tecnologías Utilizadas
+
+| Componente | Tecnología |
+| :--- | :--- |
+| **Smart Contracts** | Rust + Soroban |
+| **Backend** | Java 25 + Spring Boot 3.4 |
+| **Blockchain** | Stellar Network (Testnet) |
+| **Base de Datos** | PostgreSQL (Datos locales) |
+| **Control de Versiones** | Git / GitHub |
+
+---
+
+## 📂 Arquitectura del Repositorio
 
 ```text
 LogiTech/
 │
-├── logitech-contract/   → Smart Contract (Rust + Soroban)
-├── logitech-api/        → Microservicios Backend (Java 25 + Spring Boot)
-└── logitech-docs/       → Documentación técnica
-Flujo de la AplicaciónRegistro: El estudiante sube su solicitud.Validación: El microservicio en Java verifica los requisitos.Aprobación: El Smart Contract genera el préstamo automáticamente.Desembolso: Envío de fondos a la wallet del estudiante.Trazabilidad: Registro inmutable en la red Stellar.Instalación y Configuración1. Clonar el repositorioBashgit clone [https://github.com/SistemasTecTlaxiaco/actividad-9-documentacion-de-repositorio-rbj.git](https://github.com/SistemasTecTlaxiaco/actividad-9-documentacion-de-repositorio-rbj.git)
-2. Compilar Contrato (Soroban)Bashcd logitech-contract
-cargo build --target wasm32-unknown-unknown --release
-3. Ejecutar API (Spring Boot)Bashcd logitech-api
-./mvnw spring-boot:run
-Endpoints Principales (API REST)MétodoEndpointDescripciónPOST/api/prestamos/solicitarRegistra una nueva solicitud.GET/api/prestamos/historial/{id}Consulta el estado en blockchain.POST/api/pagos/abonarEjecuta un pago al contrato.ConclusiónLogiTech empodera al estudiante y asegura que el capital educativo se maneje con la máxima integridad tecnológica, eliminando la corrupción y los retrasos burocráticos.
-### ¿Cómo pegarlo para que no falle?
-1. **Borra todo** lo que está en el cuadro negro de tu captura.
-2. Copia el texto de arriba (desde el primer `#` hasta el final).
-3. Pégalo.
-4. Dale clic a la pestaña que dice **"Preview"** (arriba del cuadro de texto). Si lo ves con títulos grandes y tablas, ¡ya quedó!
-5. Dale al botón verde de **"Commit changes"**.
+├── logitech-contract/   → Código fuente del Smart Contract en Rust.
+├── logitech-api/        → Microservicios en Java (Controller, Service, Repository).
+├── logitech-docs/       → Diagramas de arquitectura y casos de uso.
+└── README.md            → Documentación principal.
+⚙️ Instalación y Uso
+1. Requisitos Previos
+Java 25 instalado.
 
-¡Avísame si en el "Preview" ya se ve bien ordenado!
+Rust y Soroban CLI configurados.
+
+Node.js (opcional para el frontend).
+
+2. Clonar y Configurar
+Bash
+git clone [https://github.com/SistemasTecTlaxiaco/actividad-9-documentacion-de-repositorio-rbj.git](https://github.com/SistemasTecTlaxiaco/actividad-9-documentacion-de-repositorio-rbj.git)
+cd actividad-9-documentacion-de-repositorio-rbj
+3. Despliegue del Contrato
+Bash
+cd logitech-contract
+cargo build --target wasm32-unknown-unknown --release
+# Desplegar en Testnet
+soroban contract deploy --wasm target/wasm32-unknown-unknown/release/logitech.wasm --source admin --network testnet
+4. Iniciar Backend
+Bash
+cd ../logitech-api
+./mvnw spring-boot:run
+🔗 Endpoints de la API (Documentación)
+POST /api/v1/solicitudes: Envía una nueva solicitud de préstamo al sistema.
+
+GET /api/v1/blockchain/status/{hash}: Consulta el estado real de la transacción en Stellar.
+
+POST /api/v1/pagos: Registra el abono de una cuota de préstamo mediante el Smart Contract.
+
+🛡️ Seguridad y Buenas Prácticas
+Variables de Entorno: Las claves privadas nunca se suben al repositorio (uso de .env).
+
+Manejo de Errores: Implementación de GlobalExceptionHandler en el backend para flujos robustos.
+
+Inmutabilidad: Los registros críticos no pueden ser modificados una vez confirmados en la blockchain.
+
+🎓 Conclusión
+LogiTech representa la evolución del financiamiento estudiantil, combinando la robustez de Java 25 con la transparencia de Web3. Es una herramienta diseñada para empoderar a los estudiantes y modernizar la gestión de recursos públicos y privados.
